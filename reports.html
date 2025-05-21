@@ -9,16 +9,28 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./styles//styles.css" />
   </head>
   <body class="p-4">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4 border">
+      <a class="navbar-brand p-3" href="index.html">SYOS POS</a>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">POS</a>
+        <a class="nav-item nav-link" href="reports.html">Reports</a>
+      </div>
+    </nav>
+
     <div class="container">
       <h1>Reports</h1>
       <ul class="nav nav-tabs" id="reportTabs">
         <li class="nav-item">
-          <a class="nav-link active" data-target="daily-sales">Daily Sales</a>
+          <a class="nav-link active pe-auto" data-target="daily-sales"
+            >Daily Sales</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-target="reshelve">Reshelve</a>
+          <a class="nav-link cursor-pointer" data-target="reshelve">Reshelve</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-target="reorder">Reorder</a>

@@ -1,6 +1,12 @@
 const API = "http://localhost:8080/syos-backend/api/reports";
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Set default date to yesterday
+  const dateInput = document.getElementById("reportDate");
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  dateInput.value = yesterday.toISOString().split("T")[0];
+
   // 1. Hook up tab clicks
   document.querySelectorAll("#reportTabs .nav-link").forEach((tab) => {
     tab.addEventListener("click", (e) => {
@@ -14,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 2. Hook up date-change
-  document.getElementById("reportDate").addEventListener("change", () => {
+  dateInput.addEventListener("change", () => {
     const active = document.querySelector("#reportTabs .active").dataset.target;
     loadReport(active);
   });
